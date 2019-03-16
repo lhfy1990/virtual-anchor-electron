@@ -1,0 +1,8 @@
+{
+    "name": "virtual-anchor-electron",
+    "productName": "Virtual Anchor",
+    "version": "1.0.0",
+    "description": "Virtual Anchor with Electron",
+    "main": "electron.prod.js",
+    "license": "ISC"
+}

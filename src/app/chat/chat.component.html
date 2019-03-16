@@ -1,0 +1,33 @@
+<div class="card is-fullheight-with-navbar">
+  <div class="card-header">
+    <div class="card-header-title">Thread</div>
+    <div class="card-header-icon">
+      <span class="icon">
+        <img src="">
+      </span>
+    </div>
+  </div>
+  <div #cardContent class="card-content is-scroll">
+    <div class="media" *ngFor="let entry of messages">
+      <div class="media-left">
+        <p>{{entry.ts | date : 'MM/dd/yyyy'}}</p>
+        <p>{{entry.ts | date : 'hh:mm:ss'}}</p>
+      </div>
+      <div class="media-content">
+        <p>{{entry.name}}:</p>
+        <p>{{entry.message}}</p>
+      </div>
+      <div class="media-right"></div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="card-footer-item field has-addons">
+      <div class="control is-expanded">
+        <input class="input" type="text" [(ngModel)]="message" (keyup.enter)="sendMessage(message)"/>
+      </div>
+      <div class="control">
+        <button class="button is-success" (click)="sendMessage(message)">Send</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* hotfix: .panel-block > .control breaks functionality for .has-addons > .control.is-expanded */
+.panel-block.has-addons > .control:not(is-expanded) {
+  flex-grow: inherit;
+  flex-shrink: inherit;
+  width: inherit;
+}
+
+.is-scroll {
+  overflow-y: auto;
+}
+
+.card.is-fullheight-with-navbar > .card-content {
+  height: calc(100vh - 3 * 3.25rem);
+}
+.card.is-fullheight-with-navbar > .card-footer, .card-header {
+  height: 3.25rem;
+}

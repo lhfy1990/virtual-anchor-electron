@@ -1,0 +1,20 @@
+<nav class="navbar is-primary">
+  <div class="navbar-brand">
+    <a class="navbar-item" routerLink="/">
+      <img src="assets/img/logo.png" />
+    </a>
+    <a class="navbar-burger buger" [ngClass]="{'is-active': isNavActive}" (click)="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+  <div id="navbar-menu" class="navbar-menu" [ngClass]="{'is-active': isNavActive}">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="/chat" routerLinkActive="is-active" (click)="toggleNav()">Chat</a>
+      <a class="navbar-item" routerLink="/settings" routerLinkActive="is-active" (click)="toggleNav()">Settings</a>
+    </div>
+    <div class="navbar-end"></div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
